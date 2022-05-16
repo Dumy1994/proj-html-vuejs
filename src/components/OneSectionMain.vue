@@ -1,28 +1,28 @@
 <template>
-  <div class="debug p-0 container-fluid section">
-      <div class="preview d-flex flex-column justify-content-between  debug2">
+  <div class="p-0 container-fluid section">
+      <div class="preview d-flex flex-column justify-content-between">
           <!-- section 1  -->
-          <div class="col-12 container-card d-flex justify-content-between debug">
-              <div class="col-3 card debug2">
+          <div class="col-12 container-card d-flex justify-content-between">
+              <div class="col-3 card ">
                   <img src="../assets/img/blog-46.jpg" alt= "blog-46">
               </div>
-              <div class="col-3 card  debug2">
-
+              <div class="col-3 card  ">
+                  <img src="../assets/img/blog-47.jpg" alt= "blog-47">
               </div>
-              <div class="col-3 card debug2">
-
+              <div class="col-3 card ">
+                  <img src="../assets/img/blog-48.jpg" alt= "blog-48">
               </div>
           </div>
           <!-- section 2  -->
-          <div class="col-12 container-card d-flex justify-content-between debug">
-              <div class="col-3 card debug2">
-
+          <div class="col-12 container-card d-flex justify-content-between">
+              <div class="col-3 card ">
+                  <img src="../assets/img/blog-49.jpg" alt= "blog-49">
               </div>
-              <div class="col-3 card  debug2">
-
+              <div class="col-3 card  ">
+                  <img src="../assets/img/blog-50.jpg" alt= "blog-50">
               </div>
-              <div class="col-3 card debug2">
-
+              <div class="col-3 card ">
+                  <img src="../assets/img/blog-51.jpg" alt= "blog-51">
               </div>
           </div>
 
@@ -56,15 +56,17 @@ export default {
     background-color: $bg-white-dark;
     .preview{
     width: 80%;
-    height: 45vh;
-    margin: 5vh auto;
+    margin-top: 20px !important;
+    margin: auto;
     
     .container-card{
-        height: 20vh;
+        
         .card{
-            width: 31%;
+            width: 32%;
+            margin-bottom: 20px ;
             img{
-                height: 100%;
+                width: 100%;
+                object-fit: contain;
             }
         }
     }
