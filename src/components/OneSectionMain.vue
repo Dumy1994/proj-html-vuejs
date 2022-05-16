@@ -2,8 +2,8 @@
   <div class="p-0 container-fluid section">
       <div class="preview d-flex flex-column justify-content-between">
           <!-- section 1  -->
-          <div class="col-12 container-card d-flex justify-content-between">
-              <div class="col-3 card ">
+          <div class="col-12 container-card d-flex justify-content-between sec-1 margin-top">
+              <div class="col-3  card ">
                   <img src="../assets/img/blog-46.jpg" alt= "blog-46">
               </div>
               <div class="col-3 card  ">
@@ -56,9 +56,10 @@ export default {
     background-color: $bg-white-dark;
     .preview{
     width: 80%;
-    margin-top: 20px !important;
     margin: auto;
-    
+    .margin-top{
+        margin-top: 20px;
+    }
     .container-card{
         
         .card{
