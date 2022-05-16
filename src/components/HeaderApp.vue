@@ -73,8 +73,9 @@ export default {
     }
   }
   hr{
-      color: $br-white2;
+      background-color:$bg-grey-white !important;
       margin: 0 !important;
+
     }
   .navbar{
     height: 6vh;
