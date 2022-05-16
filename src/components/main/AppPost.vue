@@ -1,17 +1,20 @@
 <template>
-  <section class="container-fluid p-0 debug">
+  <section class="container-fluid p-0 ">
     <div class=" container-section d-flex justify-content-between">
         <popular-post/>
-
+        <recent-post/>
+        <featured-author/>
     </div>
 
   </section>
 </template>
 
 <script>
+import FeaturedAuthor from './featuredAuthor.vue'
 import PopularPost from './PopularPost.vue'
+import RecentPost from './RecentPost.vue'
 export default {
-  components: { PopularPost },
+  components: { PopularPost, RecentPost, FeaturedAuthor },
     name: 'AppPost',
     data(){
         return{

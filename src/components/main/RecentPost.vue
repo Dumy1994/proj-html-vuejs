@@ -1,14 +1,14 @@
 <template>
         <div class="section d-flex flex-column ">
             <h2>
-                POPULAR POSTS
+                RECENT POSTS
             </h2>
              <!-- section 1  -->
             <div class="popular d-flex flex-column">
                 <div class="section-popular d-flex">
-                    <img src="../../assets/img/blog-55.jpg" alt="blog-55">
+                    <img src="../../assets/img/blog-65.jpg" alt="blog-65">
                     <span>
-                        <h3>Simple Ways to Have a Pretty Face</h3>
+                        <h3>Main Reasons To Stop Texting And Driving</h3>
                         <h4>January 12, 2019</h4>
                     </span>
                 </div>
@@ -17,9 +17,9 @@
             <!-- section 2  -->
             <div class="popular d-flex flex-column">
                 <div class="section-popular d-flex">
-                    <img src="../../assets/img/blog-56.jpg" alt="blog-56">
+                    <img src="../../assets/img/blog-66 (1).jpg" alt="blog-66">
                     <span>
-                        <h3>Ranking the greatest players in basketball</h3>
+                        <h3>Tips to Help You Quickly Prepare your Lunch</h3>
                         <h4>January 12, 2019</h4>
                     </span>
                 </div>
@@ -28,9 +28,9 @@
             <!-- section 3  -->
             <div class="popular d-flex flex-column">
                 <div class="section-popular d-flex">
-                    <img src="../../assets/img/blog-57.jpg" alt="blog-57">
+                    <img src="../../assets/img/blog-67.jpg" alt="blog-67">
                     <span>
-                        <h3>4 Ways to Look Cool in Glasses</h3>
+                        <h3>Why should I buy a smartwatch?</h3>
                         <h4>Januory 12, 2019</h4>
                     </span>
                 </div>
@@ -39,9 +39,9 @@
             <!-- section 4  -->
             <div class="popular d-flex flex-column">
                 <div class="section-popular d-flex">
-                    <img src="../../assets/img/blog-58.jpg" alt="blog-58">
+                    <img src="../../assets/img/blog-68.jpg" alt="blog-68">
                     <span>
-                        <h3>Top Camper Trailer Towing Tips</h3>
+                        <h3>The best augmented reality smartglasses</h3>
                         <h4>Januory 12, 2019</h4>
                     </span>
                 </div>
@@ -50,9 +50,9 @@
             <!-- section 5  -->
             <div class="popular d-flex flex-column">
                 <div class="section-popular d-flex">
-                    <img src="../../assets/img/blog-59.jpg" alt="blog-59">
+                    <img src="../../assets/img/blog-69.jpg" alt="blog-69">
                     <span>
-                        <h3>5 Lovely Walks in New York</h3>
+                        <h3>12 Healthiest Foods to Eat for Breakfast</h3>
                         <h4>Januory 12, 2019</h4>
                     </span>
                 </div> 
