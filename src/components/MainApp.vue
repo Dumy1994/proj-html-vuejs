@@ -1,16 +1,20 @@
 <template>
   <div>
-    <one-section-main/>
-    <two-section-main/>
+   <feautured-post/>
+   <app-post/>
+   
   </div>
 </template>
 
 <script>
-import OneSectionMain from './OneSectionMain.vue'
-import TwoSectionMain from './TwoSectionMain.vue'
+import AppPost from './main/AppPost.vue'
+import FeauturedPost from './main/FeauturedPost.vue'
+
+
 export default {
-  components: { OneSectionMain, TwoSectionMain },
-  name:'MainApp',
+  components: {FeauturedPost, AppPost},
+ 
+     name:'MainApp',
   data(){
         return{
             

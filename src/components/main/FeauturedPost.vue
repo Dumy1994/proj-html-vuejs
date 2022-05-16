@@ -4,7 +4,7 @@
         <!-- section 1  -->
         <div class="col-12 container-card d-flex justify-content-between sec-1 margin-top">
             <div class="col-3  card ">
-                <img src="../assets/img/blog-46.jpg" alt= "blog-46">
+                <img src="../../assets/img/blog-46.jpg" alt= "blog-46">
                 <div class="title">
                     <span class="name">
                         PHOTOGRAPHY
@@ -16,7 +16,7 @@
                 </div>   
             </div>
             <div class="col-3 card  ">
-                <img src="../assets/img/blog-47.jpg" alt= "blog-47">
+                <img src="../../assets/img/blog-47.jpg" alt= "blog-47">
                 <div class="title">
                     <span class="name">
                         GADGETS
@@ -28,7 +28,7 @@
                 </div> 
             </div>
             <div class="col-3 card ">
-                <img src="../assets/img/blog-48.jpg" alt= "blog-48">
+                <img src="../../assets/img/blog-48.jpg" alt= "blog-48">
                 <div class="title">
                     <span class="name">
                         TRAVEL
@@ -43,7 +43,7 @@
           <!-- section 2  -->
         <div class="col-12 container-card d-flex justify-content-between">
             <div class="col-3 card ">
-                <img src="../assets/img/blog-49.jpg" alt= "blog-49">
+                <img src="../../assets/img/blog-49.jpg" alt= "blog-49">
                 <div class="title">
                     <span class="name">
                         LIFESTYLE
@@ -54,7 +54,7 @@
                 </div> 
             </div>
             <div class="col-3 card  ">
-                <img src="../assets/img/blog-50.jpg" alt= "blog-50">
+                <img src="../../assets/img/blog-50.jpg" alt= "blog-50">
                 <div class="title">
                     <span class="name">
                         TRAVEL
@@ -65,7 +65,7 @@
                 </div> 
             </div>
             <div class="col-3 card ">
-                <img src="../assets/img/blog-51.jpg" alt= "blog-51">
+                <img src="../../assets/img/blog-51.jpg" alt= "blog-51">
                 <div class="title">
                     <span class="name">
                         RECIPES
@@ -86,7 +86,7 @@
 
 <script>
 export default {
-  name:'OneSectionMain',
+  name:'FeauturedPost',
   data(){
         return{
             
@@ -103,7 +103,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./style/general.scss";
+@import "../style/general.scss";
 .section{
     background-color: $bg-white-dark;
     .preview{
