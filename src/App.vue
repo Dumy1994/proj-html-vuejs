@@ -29,6 +29,11 @@ export default {
     MainApp,
     FooterApp
     
+  },
+  data(){
+    return{
+
+    }
   }
 }
 </script>
