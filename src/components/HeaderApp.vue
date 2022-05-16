@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./style/general.scss";
   .about{
     height: 5vh;
@@ -73,7 +73,7 @@ export default {
     }
   }
   hr{
-      background-color:$bg-grey-white !important;
+      background-color:$bg-grey-white ;
       margin: 0 !important;
 
     }

@@ -102,7 +102,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./style/general.scss";
 .section{
     background-color: $bg-white-dark;
@@ -124,8 +124,9 @@ export default {
             }
             .title{
                 position: absolute;
-                    left: 10px;
-                    bottom: 10px;
+                    left: 20px;
+                    bottom: 20px;
+                    max-width: 90%;
                 .name{
                     color: $txt-white;
                     padding: 3px;
