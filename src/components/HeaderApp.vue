@@ -11,9 +11,12 @@
       <!-- section logo  -->
       <div class="logo d-flex align-items-center">
         <img src="../assets/img/logo-default-slim.png" alt="">
+        
       </div>
       <!-- nav bar  -->
-      <nav class="navbar debug">
+       <hr>
+      <nav class="navbar">
+       
         <div  v-for="(bar,index) in dati" :key="index">
           <a href="#">{{bar}}</a>
         </div>
@@ -38,7 +41,6 @@ export default {
     computed:{
 
     },
-
 }
 </script>
 
@@ -51,8 +53,7 @@ export default {
       margin-left: 10%;
       color: $txt-white;
       font-size: 0.8rem;
-      margin-bottom: 0;
-      
+      margin-bottom: 0; 
     }
     a{
       text-decoration: none;
@@ -63,29 +64,33 @@ export default {
     }
   }
   .logo{
-    height: 15vh;
+    height: 12vh;
     width: 80%;
     margin: 0 auto;
     background-color: $bg-white;
     img{
-      height: 60%;
-      
+      height: 50%;
     }
-
   }
+  hr{
+      color: $br-white2;
+      margin: 0 !important;
+    }
   .navbar{
-    height: 10vh;
+    height: 6vh;
     width: 50%;
     margin-left: 10%;
     background-color: $bg-white;
-    border-top:1px solid $br-white2;
     a{
       text-decoration: none;
       color: $txt-black;
       font-weight: 700;
-    }
-    .active{
-      color: $txt-blue;
+      &:hover {
+        color: $txt-blue;
+      }
+      &:active {
+        color: $txt-blue;
+      }
     }
   }
 
