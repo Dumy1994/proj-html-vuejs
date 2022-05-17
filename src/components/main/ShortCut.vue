@@ -1,9 +1,11 @@
 <template>
   <section class="container-fluid p-0 short">
       <ul class="d-flex justify-content-around align-items-center">
+          <li><i class="fa-solid fa-angle-left"></i></li>
           <li  v-for="(name, index) in short" :key="index">
               <a  href="#">{{name}}</a>
           </li>
+          <li><i class="fa-solid fa-angle-right"></i></li>
       </ul>
 
   </section>
@@ -33,10 +35,13 @@ export default {
             a{
                 text-decoration: none;
                 height: 20px;
-                background-color: $txt-black2;
+                background-color: $bg-grey-dark2;
                 color: $txt-white;
                 padding: 10px;
                 width: 60px;
+            }
+            i{
+                color: $bg-grey-dark2;
             }
         }
     }

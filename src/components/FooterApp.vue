@@ -1,13 +1,17 @@
 <template>
   <div class="container-fluid p-0">
     <div class="container-footer d-flex ">
+      <div class="triangle"></div>
+      <div class="get-in-touch">
+        <h3>Get in Touch</h3>
+      </div>
       <!-- ABOUT THE BLOG  -->
       <div class="col-4 about ">
         <h2>ABOUT THE BLOG</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna semper scelerisque.
         </p>
         <p>Praesent venenatis turpis vitae purus semper, eget sagittis velit venenatis ptent taciti sociosqu ad litora..</p>
-        <a href="#">VIEW MORE</a>
+        <a href="#">VIEW MORE<i class="fa-solid fa-angle-right"></i></a>
       </div>
       <!-- RECENT POSTS  -->
       <div class="col-3 recent-posts ">
@@ -32,11 +36,13 @@
       <div class="col-3 recent-comments ">
         <h2>RECENT COMMENTS</h2>
         <div class="comments">
-          <h3><strong>John Doe</strong> commented on  <a href="#">lorem ipsum dolor sit amet.</a></h3>
+          <h3><i class="fa-solid fa-angle-right"></i><strong>John Doe</strong> commented on 
+          <a href="#">lorem ipsum dolor sit amet.</a></h3>
           <h4>12:55 AM Dec 19th</h4>
         </div>
         <div class="comments">
-          <h3><strong>John Doe</strong> commented on  <a href="#">lorem ipsum dolor sit amet.</a></h3>
+          <h3><i class="fa-solid fa-angle-right"></i><strong>John Doe</strong> commented on  
+          <a href="#">lorem ipsum dolor sit amet.</a></h3>
           <h4>12:55 AM Dec 19th</h4>
         </div>
       </div>
@@ -56,9 +62,9 @@
           <h4> Copyright 2020. All Rights Reserved.</h4>
         </div>
         <div class="col-6 porto-logo  d-flex justify-content-end">
-          <h4>FAQ's</h4>
-          <h4>Sitemap</h4>
-          <h4>CONTACT Us</h4>
+          <h4><i class="fa-solid fa-angle-right"></i>FAQ's</h4>
+          <h4><i class="fa-solid fa-angle-right"></i>Sitemap</h4>
+          <h4><i class="fa-solid fa-angle-right"></i>CONTACT Us</h4>
         </div>
       </div>
 
@@ -92,6 +98,33 @@ export default {
   .container-footer{
     width: 80%;
     margin: 0 auto;
+    position: relative;
+    .triangle{
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-bottom: 20px solid $bg-blue-dark;
+      z-index: 1000;
+      position: absolute;
+      top: -20px;
+      left: -10px;
+    }
+    .get-in-touch{
+      height: 40px;
+      background-color: $bg-blue;
+      color: $txt-white;
+      position: absolute;
+      top: -20px;
+      
+      h3{
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 40px;
+        font-style: italic;
+        font-size: 1rem;
+      }
+      
+    }
     
     .about{
       margin-top: 70px;
@@ -108,6 +141,9 @@ export default {
       a{
         text-decoration: none;
         color: $txt-white;
+        i{
+          margin-left: 5px;
+        }
       }
     }
     .recent-posts{
@@ -155,8 +191,13 @@ export default {
         margin-bottom: 30px;
         h3{
           color: $txt-white;
+          i{
+            color: $txt-blue;
+            margin-right: 10px;
+          }
           a{
             text-decoration: none;
+            color: $txt-blue;
           }
         }
         h4{
@@ -207,6 +248,9 @@ export default {
           color: $txt-grey;
           margin-left: 20px;
           line-height: 70px;
+          i{
+            margin-right: 5px;
+          }
         }
       }
     }

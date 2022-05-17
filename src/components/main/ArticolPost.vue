@@ -38,17 +38,30 @@
         <div class="social  col-3">
             <h2>LATEST FROM TWITTER</h2>
             <div class="twitter">
-                <div>
-                    <h4>If you have any suggestions for the next
-                    updates, let us know.
-                    </h4>
-                    <a href="#">01:05 PM Sep 18th</a>
+               
+                <div class="d-flex ">
+                    <div>
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div>
+                        <h4>If you have any    suggestions for the next
+                        updates, let us know.
+                        </h4>
+                         <a href="#">01:05 PM Sep 18th</a> 
+                    </div>
+                    
                 </div>
-                <div>
-                    <h4>We have just updated Porto Admin. Check
-                     the changelog for more information.
-                    </h4>
-                    <a href="#">01:05 PM Sep 18th</a>
+                <div class="d-flex">
+                    <div>
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div>
+                        <h4>We have just updated Porto Admin. Check
+                         the changelog for more information.
+                        </h4>
+                        <a href="#">01:05 PM Sep 18th</a>
+                    </div>
+                    
                 </div>
             </div>
             <!-- instagram  -->
@@ -108,6 +121,7 @@ export default {
 .container-fluid{
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 20px;
     .container-card{
         min-height: 60vh;
         img{
@@ -166,9 +180,19 @@ export default {
             font-weight: 600;
         }
         .twitter{
-            div{
-                h4{
-                    color: $txt-grey;
+            .d-flex{
+                margin-top: 20px;
+                i{
+                    margin-right: 10px;
+                }
+            
+                div{
+                    h4{
+                        color: $txt-grey;
+                    }
+                    a{
+                        color: $txt-blue;
+                    }
                 }
             }
         }
