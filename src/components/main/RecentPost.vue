@@ -4,69 +4,29 @@
                 RECENT POSTS
             </h2>
              <!-- section 1  -->
-            <div class="popular d-flex flex-column">
+            <div class="popular d-flex flex-column" v-for="(item,index) in dati" :key="index">
                 <div class="section-popular d-flex">
-                    <img src="../../assets/img/blog-65.jpg" alt="blog-65">
-                    
+                    <img :src="require('../../assets/img/' + item.img)" alt="blog-65">
                     <span>
-                        <h3>Main Reasons To Stop Texting And Driving</h3>
-                        <h4>January 12, 2019</h4>
+                        <h3>{{item.title}}</h3>
+                        <h4>{{item.date}}</h4>
                     </span>
                 </div>
                 <hr>  
             </div>
-            <!-- section 2  -->
-            <div class="popular d-flex flex-column">
-                <div class="section-popular d-flex">
-                    <img src="../../assets/img/blog-66 (1).jpg" alt="blog-66">
-                    <span>
-                        <h3>Tips to Help You Quickly Prepare your Lunch</h3>
-                        <h4>January 12, 2019</h4>
-                    </span>
-                </div>
-                <hr>  
-            </div>
-            <!-- section 3  -->
-            <div class="popular d-flex flex-column">
-                <div class="section-popular d-flex">
-                    <img src="../../assets/img/blog-67.jpg" alt="blog-67">
-                    <span>
-                        <h3>Why should I buy a smartwatch?</h3>
-                        <h4>Januory 12, 2019</h4>
-                    </span>
-                </div>
-                <hr>  
-            </div>
-            <!-- section 4  -->
-            <div class="popular d-flex flex-column">
-                <div class="section-popular d-flex">
-                    <img src="../../assets/img/blog-68.jpg" alt="blog-68">
-                    <span>
-                        <h3>The best augmented reality smartglasses</h3>
-                        <h4>Januory 12, 2019</h4>
-                    </span>
-                </div>
-                <hr>  
-            </div>
-            <!-- section 5  -->
-            <div class="popular d-flex flex-column">
-                <div class="section-popular d-flex">
-                    <img src="../../assets/img/blog-69.jpg" alt="blog-69">
-                    <span>
-                        <h3>12 Healthiest Foods to Eat for Breakfast</h3>
-                        <h4>Januory 12, 2019</h4>
-                    </span>
-                </div> 
-            </div>
+           
+            
+            
         </div>
 </template>
 
 <script>
+import RecentPost from '../../RecentPost'
 export default {
     name: 'PopularPost',
     data(){
         return{
-
+            dati: RecentPost,
         }
     }
 }
@@ -85,7 +45,7 @@ export default {
                 cursor: pointer;
                 &:hover{
                     transform: scale(200%);
-                   z-index:100;
+                    z-index:10;
                 }
                
             }

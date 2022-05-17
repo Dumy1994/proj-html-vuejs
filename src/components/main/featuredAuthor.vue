@@ -4,14 +4,14 @@
             FEATURED POSTS
         </h2>
         <div class="featured">
-            <img class="margin-top" src="../../assets/img/blog-66.jpg" alt="blog-66">
+            <img class="margin-top"  :src="require('../../assets/img/' + dati[activeIndex].img)" alt="blog-66">
             <div class="title">
                 <span class="name">
                     RECIPES
                 </span>
                 <div class="info">
-                    Tips to Help You Quickly Prepare your
-                    Lunch
+                    {{dati[activeIndex].title}}
+                    
                 </div>
             </div> 
         </div>
@@ -33,13 +33,41 @@
 </template>
 
 <script>
+import RecentPost from '../../RecentPost'
 export default {
     name: 'PopularPost',
     data(){
         return{
-
+            dati: RecentPost,
+            intervalId: null,
+            activeIndex: 0,
         }
-    }
+    },
+    methods:{
+        // indexAuto(){
+        //    if(this.activeIndex == 3){
+        //        return this.activeIndex == 0;
+        //    }
+                
+            
+        // },
+         autoScroll(){
+            this. intervalId = setInterval(()=>{
+                this.activeIndex = this.activeIndex +1,
+                console.log(this.activeIndex)
+                if(this.activeIndex == 3){
+                    return this.activeIndex = 0
+                }
+            },2000)
+            
+        },
+        
+    },
+    computed:{
+        
+    },mounted(){
+        this.autoScroll();
+    },
 }
 </script>
 
@@ -50,6 +78,7 @@ export default {
     .featured{
         position: relative;
         img{
+            
             width: 100%;
         }
         .title{
@@ -76,7 +105,7 @@ export default {
     
 }   
 .margin-top{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .margin-left{
     margin-left: 10px;

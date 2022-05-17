@@ -106,6 +106,7 @@
 
 <script>
 export default {
+    
   name:'FeauturedPost',
   data(){
         return{

@@ -84,7 +84,11 @@ export default {
                 cursor: pointer;
                 &:hover{
                     transform: scale(200%);
-                } 
+                    z-index:10;
+                }
+                &:hover span{
+                    margin-left: 30px;
+                }
             }
             span{
                 
