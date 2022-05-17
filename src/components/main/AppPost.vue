@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../style/general.scss";
+@import "../style/variables.scss";
     section{
         min-height: 50vh;
         .container-section{

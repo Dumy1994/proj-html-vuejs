@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./style/general.scss";
+@import "./style/variables.scss";
   .about{
     height: 5vh;
     background-color: $bg-blue;

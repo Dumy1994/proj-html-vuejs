@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../style/general.scss";
+@import "../style/variables.scss";
 .short{
     height: 15vh;
     margin-top: 10px;

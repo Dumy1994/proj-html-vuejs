@@ -41,4 +41,5 @@ export default {
 <style lang="scss">
 @import "./components/style/general.scss";
 
+
 </style>

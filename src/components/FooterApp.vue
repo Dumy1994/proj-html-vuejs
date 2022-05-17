@@ -57,8 +57,8 @@
         </div>
         <div class="col-6 porto-logo  d-flex justify-content-end">
           <h4>FAQ's</h4>
-          <h4>SITEMAP</h4>
-          <h4>CONTACT US</h4>
+          <h4>Sitemap</h4>
+          <h4>CONTACT Us</h4>
         </div>
       </div>
 
@@ -85,7 +85,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./style/general.scss";
+@import "./style/variables.scss";
   .container-fluid{
     background-color: $bg-black2;
   }

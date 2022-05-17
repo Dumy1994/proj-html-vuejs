@@ -1,26 +1,30 @@
 <template>
     <div class="container-fluid p-0 row">
-        <div class="container-card p-0 col-9 debug">
+        <div class="container-card p-0 col-9 ">
           <!-- 1 artical  -->
-            <div v-for="(detail, index) in dati" :key="index">
+            <div  v-for="(detail, index) in dati" :key="index">
               <!-- <img :src="require(`${detail.img}`)" alt=""> -->
-              <img :src="require('../../assets/img/' + detail.img)" alt="">
-                <div class="articol debug2 d-flex">
-                    <div class="date debug col-1">
+              <img class="margin-top" :src="require('../../assets/img/' + detail.img)" alt="">
+                <div class="articol margin-top d-flex">
+                    <div class="date  col-1">
                         <div class="day text-center">{{detail.date}}</div>
                         <div class="month text-center">JAN</div>
                     </div>
-                    <div class="col-11 debug text">
-                    {{detail.text}}
-                        <div class="">
+                    <div class="col-11  text">
+                        <h2>{{detail.title}}</h2>
+                        <h3>{{detail.text}}</h3>
+                        <div class="detail">
                             <span class="name">
-                                {{detail.author}}
+                                <i class="fa-regular fa-user"></i>
+                                <a href="#">{{detail.author}}</a>
                             </span>
                             <span class="section">
-                                {{detail.section}}
+                                <i class="fa-regular fa-folder"></i>
+                                <a href="#">{{detail.section}}</a>
                             </span>
                             <span class="comments">
-                                {{detail.comments}}
+                                <i class="fa-regular fa-comments"></i>
+                                <a href="#">{{detail.comments}}</a>
                             </span>
                         </div>
                     </div>
@@ -31,7 +35,7 @@
 
 
       <!-- social -->
-        <div class="social debug2 col-3">
+        <div class="social  col-3">
             <h2>LATEST FROM TWITTER</h2>
             <div class="twitter">
                 <div>
@@ -100,23 +104,24 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "../style/general.scss";
+@import "../style/variables.scss";
 .container-fluid{
     width: 80%;
-    margin: 40px auto;
+    margin: 0 auto;
     .container-card{
         min-height: 60vh;
         img{
             width: 100%;
+            margin-top: 40px;
         }
         .articol{
             width: 100%;
             .date{
                 .day{
                     background-color: $bg-white-dark;
-                    height: 60px;
+                    height: 50px;
                     width: 40px;
-                    line-height: 60px;
+                    line-height: 50px;
                     font-weight: 700;
                 }
                 .month{
@@ -129,12 +134,34 @@ export default {
                     font-weight: 700;
                 }
             }
+
+            .text{
+                h2{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+                h3{
+                    font-weight: 400;
+                    color: $txt-grey;
+                }
+                .detail{
+                    i{
+                        margin-right: 8px;
+                    }
+                    a{
+                        margin-right: 8px;
+                        text-decoration: none;
+                        color: $txt-blue;
+                    }
+                }
+            }
         }
     }
     .social{
         // position: fixed;
         // right: 0;
         // top: 0;
+        margin-top: 40px;
         h2{
             font-weight: 600;
         }
@@ -196,7 +223,9 @@ export default {
             }
         }
     }
-    
+    .margin-top{
+        margin-top: 20px;
+    }
 }
 
 
