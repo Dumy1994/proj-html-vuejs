@@ -4,7 +4,7 @@
         <!-- section 1  -->
         <div class="col-12 container-card d-flex justify-content-between sec-1 margin-top">
             <div class="col-3  card ">
-                <img src="../../assets/img/blog-46.jpg" alt= "blog-46">
+                <img class="img-blog" src="../../assets/img/blog-46.jpg" alt= "blog-46">
                 <div class="title">
                     <span class="name">
                         PHOTOGRAPHY
@@ -13,10 +13,15 @@
                         How To Take Better Concert Pictures in 30
                         Seconds
                     </div>
-                </div>   
+                    <div class="ghost">
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat adipisci facilis magni distinctio at iste doloremque odio similique. Ducimus, culpa.</h4>
+                    </div> 
+                    
+                </div>
+                 
             </div>
             <div class="col-3 card  ">
-                <img src="../../assets/img/blog-47.jpg" alt= "blog-47">
+                <img class="img-blog" src="../../assets/img/blog-47.jpg" alt= "blog-47">
                 <div class="title">
                     <span class="name">
                         GADGETS
@@ -25,10 +30,13 @@
                         Gadgets That Make Your Smartphone
                         Even Smarter
                     </div>
+                    <div class="ghost">
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat adipisci facilis magni distinctio at iste doloremque odio similique. Ducimus, culpa.</h4>
+                    </div> 
                 </div> 
             </div>
             <div class="col-3 card ">
-                <img src="../../assets/img/blog-48.jpg" alt= "blog-48">
+                <img class="img-blog" src="../../assets/img/blog-48.jpg" alt= "blog-48">
                 <div class="title">
                     <span class="name">
                         TRAVEL
@@ -37,13 +45,16 @@
                         20 Top-Rated Tourist Attractions in
                         Manhattan
                     </div>
+                    <div class="ghost">
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat adipisci facilis magni distinctio at iste doloremque odio similique. Ducimus, culpa.</h4>
+                    </div> 
                 </div> 
             </div>
         </div>
           <!-- section 2  -->
         <div class="col-12 container-card d-flex justify-content-between">
             <div class="col-3 card ">
-                <img src="../../assets/img/blog-49.jpg" alt= "blog-49">
+                <img class="img-blog" src="../../assets/img/blog-49.jpg" alt= "blog-49">
                 <div class="title">
                     <span class="name">
                         LIFESTYLE
@@ -51,10 +62,13 @@
                     <div class="info">
                         The Best Way to Ride a Motorcycle
                     </div>
+                    <div class="ghost">
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat adipisci facilis magni distinctio at iste doloremque odio similique. Ducimus, culpa.</h4>
+                    </div> 
                 </div> 
             </div>
             <div class="col-3 card  ">
-                <img src="../../assets/img/blog-50.jpg" alt= "blog-50">
+                <img class="img-blog" src="../../assets/img/blog-50.jpg" alt= "blog-50">
                 <div class="title">
                     <span class="name">
                         TRAVEL
@@ -62,10 +76,13 @@
                     <div class="info">
                         5 Fun Things to Do at the Beach
                     </div>
+                    <div class="ghost">
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat adipisci facilis magni distinctio at iste doloremque odio similique. Ducimus, culpa.</h4>
+                    </div> 
                 </div> 
             </div>
             <div class="col-3 card ">
-                <img src="../../assets/img/blog-51.jpg" alt= "blog-51">
+                <img class="img-blog" src="../../assets/img/blog-51.jpg" alt= "blog-51">
                 <div class="title">
                     <span class="name">
                         RECIPES
@@ -74,6 +91,9 @@
                         Amazingly Fresh Fruit And Herb Drinks For
                         Summer
                     </div>
+                    <div class="ghost">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat adipisci facilis magni distinctio at iste doloremque odio similique. Ducimus, culpa.</h3>
+                    </div> 
                 </div> 
             </div>
         </div>
@@ -118,27 +138,44 @@ export default {
             width: 32%;
             margin-bottom: 20px ;
             position: relative;
-            img{
+            cursor: pointer;
+            &:hover{
+                filter: brightness(90%);
+            }
+            .img-blog{
                 width: 100%;
                 object-fit: contain;
+                
             }
             .title{
                 position: absolute;
                     left: 20px;
                     bottom: 20px;
                     max-width: 90%;
+                    cursor: pointer;
+                    
+                    &:hover .ghost{
+                        display: block;
+                        
+                    }
                 .name{
                     color: $txt-white;
                     padding: 3px;
                     font-weight: 650;
                     font-size: 0.8rem;
                     background-color: $bg-blue;
+                    
                  }
                 .info{
                     font-weight: 650;
                     color: $txt-white;
                 }
+                .ghost{
+                display: none;
+                color: $txt-grey-white;
             }
+            }
+            
         }
     }
 }

@@ -58,16 +58,24 @@ export default {
     a{
       text-decoration: none;
       color: $txt-white;
-      font-size: 0.9rem;
+      font-size: 0.7rem;
       margin-left: 15px;
       font-weight: 4200;
+      &:hover{
+        color: $txt-grey-white;
+      }
     }
   }
   .logo{
     height: 12vh;
     width: 80%;
     margin: 0 auto;
-  
+    animation: logo 6s infinite;
+    position: relative;
+    @keyframes logo {
+    from {left: 0px;}
+    to {left: 50%;}
+    }
     img{
       height: 50%;
     }

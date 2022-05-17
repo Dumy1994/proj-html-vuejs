@@ -25,13 +25,13 @@ export default {
 <style lang="scss" scoped>
 @import "../style/variables.scss";
 .short{
-    height: 15vh;
+    height: 10vh;
     margin-top: 10px;
     background-color: $bg-blue;
     ul{
         list-style: none;
         li{
-            line-height: 15vh;
+            line-height: 10vh;
             a{
                 text-decoration: none;
                 height: 20px;

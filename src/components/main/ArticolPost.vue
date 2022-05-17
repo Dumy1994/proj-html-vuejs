@@ -26,6 +26,12 @@
                                 <i class="fa-regular fa-comments"></i>
                                 <a href="#">{{detail.comments}}</a>
                             </span>
+                            <div class="float-end read-more">
+                            
+                                <a href="#">READ MORE</a>
+                                
+                        
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,7 +127,7 @@ export default {
 .container-fluid{
     width: 80%;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     .container-card{
         min-height: 60vh;
         img{
@@ -150,6 +156,7 @@ export default {
             }
 
             .text{
+                
                 h2{
                     font-size: 1.2rem;
                     font-weight: 600;
@@ -159,6 +166,8 @@ export default {
                     color: $txt-grey;
                 }
                 .detail{
+                    border-bottom: 1px solid $br-grey-dark;
+                    padding-bottom: 20px;
                     i{
                         margin-right: 8px;
                     }
@@ -166,6 +175,17 @@ export default {
                         margin-right: 8px;
                         text-decoration: none;
                         color: $txt-blue;
+                        
+                    }
+                    .read-more{
+                        border: 1px solid $br-grey;
+                        border-radius: 5px;
+                        height: 30px;
+                        a{
+                            padding-left: 10px;
+                            color: $txt-grey;
+                            font-weight: 300;
+                        }
                     }
                 }
             }
