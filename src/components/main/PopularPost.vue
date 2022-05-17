@@ -80,14 +80,22 @@ export default {
         .section-popular{
             
             img{
-                width: 50px; 
+                width: 50px;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(200%);
+                } 
             }
             span{
                 
                 h3{
-                    color: $txt-grey2;
+                    color: $txt-black;
                     font-weight: 400;
                     margin-left: 10px;
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
                 h4{
                     color: $txt-grey-white;

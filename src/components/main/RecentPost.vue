@@ -7,6 +7,7 @@
             <div class="popular d-flex flex-column">
                 <div class="section-popular d-flex">
                     <img src="../../assets/img/blog-65.jpg" alt="blog-65">
+                    
                     <span>
                         <h3>Main Reasons To Stop Texting And Driving</h3>
                         <h4>January 12, 2019</h4>
@@ -78,16 +79,27 @@ export default {
     min-height: 50vh;
     .popular{
         .section-popular{
-            
+            position: relative;
             img{
-                width: 50px; 
+                width: 50px;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(200%);
+                   z-index:100;
+                }
+               
             }
+            
             span{
                 
                 h3{
-                    color: $txt-grey2;
+                    color: $txt-black;
                     font-weight: 400;
                     margin-left: 10px;
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
                 h4{
                     color: $txt-grey-white;

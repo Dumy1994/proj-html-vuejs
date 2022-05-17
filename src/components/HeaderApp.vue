@@ -10,7 +10,7 @@
       </div>
       <!-- section logo  -->
       <div class="logo d-flex align-items-center">
-        <img src="../assets/img/logo-default-slim.png" alt="">
+        <img class="img-logo" src="../assets/img/logo-default-slim.png" alt="">
         
       </div>
       <!-- nav bar  -->
@@ -68,14 +68,17 @@ export default {
   }
   .logo{
     height: 12vh;
-    width: 80%;
-    margin: 0 auto;
-    animation: logo 6s infinite;
-    position: relative;
-    @keyframes logo {
-    from {left: 0px;}
-    to {left: 43%;}
+    width: 100%;
+    margin: 0 ;
+    .img-logo{
+      animation: logo 15s ease infinite;
+      position: relative;
+      @keyframes logo {
+      from {left: 10%;}
+      to {left: 80%;}
     }
+    }
+    
     img{
       height: 50%;
     }
