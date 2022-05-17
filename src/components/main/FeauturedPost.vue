@@ -142,6 +142,7 @@ export default {
             &:hover{
                 filter: brightness(90%);
             }
+            
             .img-blog{
                 width: 100%;
                 object-fit: contain;
@@ -155,7 +156,8 @@ export default {
                     cursor: pointer;
                     
                     &:hover .ghost{
-                        display: block;
+                        opacity: 1;
+                        height: auto;
                         
                     }
                 .name{
@@ -165,14 +167,23 @@ export default {
                     font-size: 0.8rem;
                     background-color: $bg-blue;
                     
+                    
                  }
                 .info{
                     font-weight: 650;
                     color: $txt-white;
+                    &:hover{
+                        color: $txt-blue;
+                    }
                 }
                 .ghost{
-                display: none;
-                color: $txt-grey-white;
+                transition: opacity 2s ease-out;
+                opacity: 0;
+                height: 0;
+                overflow: hidden;
+                color: $txt-white;
+                cursor: default;
+                
             }
             }
             

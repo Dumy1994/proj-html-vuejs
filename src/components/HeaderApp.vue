@@ -74,7 +74,7 @@ export default {
     position: relative;
     @keyframes logo {
     from {left: 0px;}
-    to {left: 50%;}
+    to {left: 43%;}
     }
     img{
       height: 50%;
