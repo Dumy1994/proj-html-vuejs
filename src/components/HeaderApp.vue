@@ -67,7 +67,7 @@ export default {
     height: 12vh;
     width: 80%;
     margin: 0 auto;
-    background-color: $bg-white;
+  
     img{
       height: 50%;
     }
@@ -81,7 +81,7 @@ export default {
     height: 6vh;
     width: 50%;
     margin-left: 10%;
-    background-color: $bg-white;
+    
     a{
       text-decoration: none;
       color: $txt-black;

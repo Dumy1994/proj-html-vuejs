@@ -48,6 +48,21 @@
         </div>
       </div>
     </div>
+    <!-- footer-section2  -->
+    <div class="footer-section2">
+      <div class="container-footer d-flex">
+        <div class="col-6 d-flex porto-logo align-items-center">
+          <img src="../assets/img/logo-footer.png" alt="">
+          <h4> Copyright 2020. All Rights Reserved.</h4>
+        </div>
+        <div class="col-6 porto-logo  d-flex justify-content-end">
+          <h4>FAQ's</h4>
+          <h4>SITEMAP</h4>
+          <h4>CONTACT US</h4>
+        </div>
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -72,7 +87,7 @@ export default {
 <style lang="scss" scoped>
 @import "./style/general.scss";
   .container-fluid{
-    background-color: $bg-black3;
+    background-color: $bg-black2;
   }
   .container-footer{
     width: 80%;
@@ -145,7 +160,7 @@ export default {
           }
         }
         h4{
-          color: $txt-grey
+          color: $txt-grey;
         }
       }
     }
@@ -170,6 +185,30 @@ export default {
         }
       }
       
+    }
+  }
+  .footer-section2{
+    height: 70px;
+    width: 100%;
+    background-color: $bg-black3;
+    margin-top: 50px;
+    
+    .container-footer{
+      width: 80%;
+      margin: 0 auto;
+      .porto-logo{
+        
+        img{
+          height: 35px;
+          opacity: 60%;
+          line-height: 70px;
+        }
+        h4{
+          color: $txt-grey;
+          margin-left: 20px;
+          line-height: 70px;
+        }
+      }
     }
   }
 </style>

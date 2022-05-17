@@ -174,7 +174,7 @@ export default {
                     
                     a{
                         font-size: 0.6rem;
-                        color: $bg-white;
+                        color: $txt-white;
                         text-decoration: none;
                         font-weight: 700;
                         
