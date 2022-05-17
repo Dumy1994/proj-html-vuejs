@@ -4,7 +4,7 @@
           <!-- 1 artical  -->
             <div v-for="(detail, index) in dati" :key="index">
               <!-- <img :src="require(`${detail.img}`)" alt=""> -->
-              <img src="../../assets/img/blog-54.jpg" alt="">
+              <img :src="require('../../assets/img/' + detail.img)" alt="">
                 <div class="articol debug2 d-flex">
                     <div class="date debug col-1">
                         <div class="day text-center">{{detail.date}}</div>
