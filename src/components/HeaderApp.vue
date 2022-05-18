@@ -15,10 +15,15 @@
       </div>
       <!-- nav bar  -->
        <hr>
-      <nav class="navbar">
-       
-        <div  v-for="(bar,index) in dati" :key="index">
-          <a :class="{'active' : !index} " href="#">{{bar}}</a>
+      <nav class="navbar d-flex">
+       <div class="d-flex">
+          <div class=""  v-for="(bar,index) in dati" :key="index">
+            <a :class="{'active' : !index} " href="#">{{bar}}</a>
+          </div>
+       </div>
+        
+        <div class="float-end">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </nav>
   </div>
@@ -90,13 +95,15 @@ export default {
     }
   .navbar{
     height: 6vh;
-    width: 50%;
+    width: 80%;
     margin-left: 10%;
     
     a{
+      font-size: 0.9rem;
+      margin-right: 40px;
       text-decoration: none;
       color: $txt-black;
-      font-weight: 700;
+      font-weight: 600;
       &:hover {
         color: $txt-blue;
       }
