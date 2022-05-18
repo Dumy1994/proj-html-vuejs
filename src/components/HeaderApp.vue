@@ -22,10 +22,21 @@
           </div>
        </div>
         
-        <div class="float-end">
-          <i class="fa-solid fa-magnifying-glass"></i>
+        <div class=" lent float-end">
+          <i v-on:click="seen = !seen" class="fa-solid fa-magnifying-glass"></i>
+          <div v-if="seen" class="search d-flex justify-content-center align-items-center">
+            
+            <div class="input-search">
+              <input type="text"  placeholder="Type and hit enter ..."  >
+            </div>
+            <div v-on:click="seen = !seen" class="close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
         </div>
+
       </nav>
+    
   </div>
 </template>
 
@@ -36,7 +47,7 @@ export default {
   data(){
     return{
       dati: header,
-
+      seen: !true
     }
     },
     methods:{
@@ -51,6 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "./style/variables.scss";
+
   .about{
     height: 5vh;
     background-color: $bg-blue;
@@ -112,6 +124,43 @@ export default {
         color: $txt-blue;
       }
   }
+  .lent{
+    z-index: 1000;
+    cursor: pointer;
+    
+    .search{
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      height: 70vh;
+      width: 100%;
+      background-color: $bg-white;
+      color: $txt-white;
+      .close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2rem;
+        color: $txt-blue;
+      }
+      .input-search{
+        input{
+          width: 150%;
+          background-color: $bg-trasparent;
+          color: $txt-blue;
+          border-top: none;
+          border-right: none;
+          border-left: 2px solid $txt-blue;
+          border-bottom: 2px solid $txt-blue;
+        }
 
-
+      }
+    }
+           
+  }
+::placeholder {
+  color: $txt-blue;
+  padding: 10px;
+  }
 </style>
