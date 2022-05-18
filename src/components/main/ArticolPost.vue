@@ -82,28 +82,30 @@
         <div>
             <!-- page 2 -->
             <div v-if="index == 1" class="page2">
-                <div   v-for="(detail, index) in dati" :key="index">
-              <img class="margin-top" :src="require('../../assets/img/' + detail.img)" alt="">
+                <div >
+                    <video class="margin-top" width="100%" height="550px" controls autoplay>
+                    <source :src="require('../../assets/img/memory-of-a-woman.mp4')" type="video/mp4">
+                    </video>
                 <div class="articol margin-top d-flex">
                     <div class="date  col-1">
-                        <div class="day text-center">{{detail.date}}</div>
+                        <div class="day text-center">6</div>
                         <div class="month text-center">JAN</div>
                     </div>
                     <div class="col-11  text">
-                        <h2>{{detail.title}}</h2>
-                        <h3>{{detail.text}}</h3>
+                        <h2>8 Amazing Things You Won't Believe Actually Exist In Nature</h2>
+                        <h3>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</h3>
                         <div class="detail">
                             <span class="name">
                                 <i class="fa-regular fa-user"></i>
-                                <a href="#">{{detail.author}}</a>
+                                <a href="#">John Doe</a>
                             </span>
                             <span class="section">
                                 <i class="fa-regular fa-folder"></i>
-                                <a href="#">{{detail.section}}</a>
+                                <a href="#"> Lifestyle, Travel</a>
                             </span>
                             <span class="comments">
                                 <i class="fa-regular fa-comments"></i>
-                                <a href="#">{{detail.comments}}</a>
+                                <a href="#">12 Comments</a>
                             </span>
                             <div class="float-end read-more">
                             
