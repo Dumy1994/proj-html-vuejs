@@ -53,12 +53,12 @@ export default {
         // },
          autoScroll(){
             this. intervalId = setInterval(()=>{
-                this.activeIndex = this.activeIndex +1,
-                console.log(this.activeIndex)
+                this.activeIndex = this.activeIndex +1;
+                // console.log(this.activeIndex)
                 if(this.activeIndex == 3){
                     return this.activeIndex = 0
                 }
-            },2000)
+            },2000) 
             
         },
         
@@ -75,6 +75,7 @@ export default {
 @import "../style/variables.scss";
 .section{
     width: 30%;
+    
     .featured{
         position: relative;
         img{

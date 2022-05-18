@@ -187,8 +187,12 @@ export default {
     }
     .recent-comments{
       margin-top: 70px;
+      h2{
+          color: $txt-white;
+        }
       .comments{
         margin-bottom: 30px;
+        
         h3{
           color: $txt-white;
           i{

@@ -2,8 +2,8 @@
   <section class="container-fluid p-0 short">
       <ul class="d-flex justify-content-between p-0 align-items-center">
           <li @click="prevSlide"><i class="fa-solid fa-angle-left"></i></li>
-          <li  v-for="(name, activeIndex) in short.slice()" :key="activeIndex">
-              <a  href="#" >{{name}}</a>
+          <li  v-for="(item,activeIndex) of short" :key="activeIndex">
+              <a  href="#" >{{item}}</a>
           </li>
           <li @click="nextSlide"><i  class="fa-solid fa-angle-right"></i></li>
       </ul>
@@ -18,10 +18,12 @@ export default {
         return{
             short:['GADGETS','PHOTOGRAPHY', 'LIFESTYLE', 'FASHION', 'RECIPES', 'TRAVEL','ARCHITECTURE','REVIEWS','SPORTS','VIDEOS','TECHNOLOGY','DESIGN'],
             activeIndex: 0,
+            shortArray:'',
 
         }
     },
     methods:{
+        
         nextSlide(){
             this.activeIndex = (this.activeIndex === 8) ? 0 : this.activeIndex += 1;
             console.log(this.activeIndex)
@@ -31,6 +33,9 @@ export default {
             console.log(this.activeIndex)
         },
     },
+    computed:{
+        subArray(){ return this.array.slice(0,3) }
+    }
 }
 
 </script>
