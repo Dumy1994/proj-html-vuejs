@@ -135,7 +135,7 @@ export default {
       z-index: 100;
       height: 70vh;
       width: 100%;
-      background-color: $bg-white;
+      background-color: $bg-white1;
       color: $txt-white;
       .close{
         position: absolute;
