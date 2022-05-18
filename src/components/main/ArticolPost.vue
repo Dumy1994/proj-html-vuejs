@@ -36,6 +36,51 @@
                     </div>
                 </div>
             </div>
+            <div class="margin-top">
+                <div class="d-flex p-0 m-0 flex-column">
+                    <div class="p-0 m-0">
+                        <img  class="margin-top all-img" src="../../assets/img/blog-13.jpg" alt="">
+                        <img class="margin-top all-img" src="../../assets/img/blog-16.jpg" alt="">
+                        <img class="margin-top all-img" src="../../assets/img/blog-20.jpg" alt="">
+                    </div>
+                    <div class="p-0 m-0">
+                        <img  class="margin-top all-img" src="../../assets/img/blog-23.jpg" alt="">
+                        <img class="margin-top all-img" src="../../assets/img/blog-29.jpg" alt="">
+                        <img class="margin-top all-img" src="../../assets/img/blog-40.jpg" alt="">
+                    </div>
+                </div>
+              
+                 <div class="articol margin-top d-flex">
+                    <div class="date  col-1">
+                        <div class="day text-center">12</div>
+                        <div class="month text-center">JAN</div>
+                    </div>
+                    <div class="col-11  text">
+                        <h2>10 Best Travel Tips After 5 Years Traveling The World</h2>
+                        <h3>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. (...]</h3>
+                        <div class="detail">
+                            <span class="name">
+                                <i class="fa-regular fa-user"></i>
+                                <a href="#">Jhon Doe</a>
+                            </span>
+                            <span class="section">
+                                <i class="fa-regular fa-folder"></i>
+                                <a href="#">Travel, Lifestyle</a>
+                            </span>
+                            <span class="comments">
+                                <i class="fa-regular fa-comments"></i>
+                                <a href="#">12 Comments</a>
+                            </span>
+                            <div class="float-end read-more">
+                            
+                                <a href="#">READ MORE</a>
+                                
+                        
+                            </div>
+                        </div>
+                    </div> 
+                </div> 
+            </div>
             
         </div>
 
@@ -137,7 +182,14 @@ export default {
         img{
             width: 100%;
             margin-top: 40px;
-            
+            cursor: pointer;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        .all-img{
+            width: calc(100% / 3);
+            margin: 0;
         }
         .articol{
             width: 100%;
@@ -165,6 +217,10 @@ export default {
                 h2{
                     font-size: 1.2rem;
                     font-weight: 600;
+                    cursor: pointer;
+                    &:hover{
+                        color: $txt-blue;
+                    }
                 }
                 h3{
                     font-weight: 400;
@@ -180,16 +236,26 @@ export default {
                         margin-right: 8px;
                         text-decoration: none;
                         color: $txt-blue;
+                        &:hover{
+                            text-decoration: underline;
+                        }
                         
                     }
                     .read-more{
                         border: 1px solid $br-grey;
                         border-radius: 5px;
                         height: 30px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $bg-grey-white;
+                        }
                         a{
                             padding-left: 10px;
                             color: $txt-grey;
                             font-weight: 300;
+                            &:hover{
+                                text-decoration: none;
+                            }
                         }
                     }
                 }
@@ -239,6 +305,7 @@ export default {
                 }
                 .tag{
                     margin-top: 20px;
+                    
                 }
                 .button{
                     margin-top: 20px;
@@ -256,7 +323,9 @@ export default {
                             color: $txt-white;
                             text-decoration: none;
                             font-weight: 700;
-                            
+                            &:hover{
+                            color: $txt-blue;
+                        }
                         }
                     }
                 }

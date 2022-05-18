@@ -24,7 +24,7 @@
                 <img class="img-profile" src="../../assets/img/avatar.jpg" alt="">
             </div> 
             <div>
-                <h2 class="margin-left">John Doe</h2>
+                <h2 class="margin-left author">John Doe</h2>
                 <p class="margin-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quo assumenda placeat corrupti fugit esse commodi nulla ipsam culpa dolores?</p>
             </div>
         </div>
@@ -103,7 +103,12 @@ export default {
     .img-profile{
         height: 100px;
     }
-    
+    .author{
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 }   
 .margin-top{
     margin-top: 20px;
