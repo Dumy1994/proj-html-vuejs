@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid p-0 row">
-        <div id="google" class="container-card p-0 col-9 ">
+        <div id="top" class="container-card p-0 col-9 ">
           <!-- artical  -->
           <div v-if="indexPage1 == 0">
             <div   v-for="(detail, index) in dati" :key="index">
@@ -11,7 +11,7 @@
                         <div class="month text-center">JAN</div>
                     </div>
                     <div class="col-11  text">
-                        <h2>{{detail.title}}</h2>
+                        <a>{{detail.title}}</a>
                         <h3>{{detail.text}}</h3>
                         <div class="detail">
                             <span class="name">
@@ -56,7 +56,7 @@
                         <div class="month text-center">JAN</div>
                     </div>
                     <div class="col-11  text">
-                        <h2>10 Best Travel Tips After 5 Years Traveling The World</h2>
+                        <a>10 Best Travel Tips After 5 Years Traveling The World</a>
                         <h3>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. (...]</h3>
                         <div class="detail">
                             <span class="name">
@@ -93,7 +93,7 @@
                             <div class="month text-center">JAN</div>
                         </div>
                         <div class="col-11  text">
-                            <h2>8 Amazing Things You Won't Believe Actually Exist In Nature</h2>
+                            <a>8 Amazing Things You Won't Believe Actually Exist In Nature</a>
                             <h3>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</h3>
                             <div class="detail">
                                 <span class="name">
@@ -126,7 +126,7 @@
                             <div class="month text-center">JAN</div>
                         </div>
                         <div class="col-11  text">
-                            <h2>7 Steps to Learn How to Play Piano</h2>
+                            <a>7 Steps to Learn How to Play Piano</a>
                             <h3>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</h3>
                             <div class="detail">
                                 <span class="name">
@@ -151,18 +151,18 @@
             </div>
         </div>
             <div class="float-end margin-top button-page">
-                <a href="#google"><button :class="{'active-button' : !index}" @click="prePage()" >1</button></a>
-               <a href="#google" ><button  :class="{'active-button' : index}" @click="nextSlide()" >2</button></a>
+                <a href="#top"><button :class="{'active-button' : !index}" @click="prePage()" >1</button></a>
+               <a href="#top" ><button  :class="{'active-button' : index}" @click="nextSlide()" >2</button></a>
                
             </div>  
         </div>
 
-        <!-- change pages  -->
+       
         
       <!-- social -->
         <div class="social col-3">
             <div class="sticky">
-                <h2>LATEST FROM TWITTER</h2>
+                <a>LATEST FROM TWITTER</a>
                 <div class="twitter">
                 
                     <div class="d-flex ">
@@ -192,7 +192,7 @@
                 </div>
                 <!-- instagram  -->
                 <div class="instagram-container">
-                    <h2>PHOTOS FROM INSTAGRAM</h2>
+                    <a>PHOTOS FROM INSTAGRAM</a>
                     <div class="instagram">
                         <div class="instagram-pictur">
                             <img src="../../assets/img/29739607_2020680068220520_4509928046932787200_n.jpg" alt="">
@@ -208,7 +208,7 @@
                             <img src="../../assets/img/29415304_166583630713703_1032667922171953152_n.jpg" alt="">
                         </div>
                     </div>
-                    <h2 class="tag">TAGS</h2>
+                    <a class="tag">TAGS</a>
                     <div class="button ">
                         <span><a href="#">DESIGN</a></span>
                         <span><a href="#">BRANDS</a></span>
@@ -333,7 +333,7 @@ export default {
 
             .text{
                 
-                h2{
+                a{
                     font-size: 1.2rem;
                     font-weight: 600;
                     cursor: pointer;
@@ -353,6 +353,7 @@ export default {
                     }
                     a{
                         margin-right: 8px;
+                        font-size: 0.8rem;
                         text-decoration: none;
                         color: $txt-blue;
                         &:hover{
@@ -387,7 +388,7 @@ export default {
             position:-webkit-sticky; 
             position:sticky; 
             top:10px;
-            h2{
+            a{
                 font-weight: 600;
             }
         
