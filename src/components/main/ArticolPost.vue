@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid p-0 row">
-        <div  class="container-card p-0 col-9 ">
+        <div id="google" class="container-card p-0 col-9 ">
           <!-- artical  -->
           <div v-if="indexPage1 == 0">
             <div   v-for="(detail, index) in dati" :key="index">
@@ -80,49 +80,80 @@
             </div> 
             </div>
         <div>
-            <!-- page 2 -->
+            <!-- page 2  -->
             <div v-if="index == 1" class="page2">
+
                 <div >
-                    <video class="margin-top" width="100%" height="550px" controls autoplay>
-                    <source :src="require('../../assets/img/memory-of-a-woman.mp4')" type="video/mp4">
+                    <video class="margin-top" width="100%" height="650px" controls autoplay>
+                        <source :src="require('../../assets/img/memory-of-a-woman.mp4')" type="video/mp4">
                     </video>
-                <div class="articol margin-top d-flex">
-                    <div class="date  col-1">
-                        <div class="day text-center">6</div>
-                        <div class="month text-center">JAN</div>
+                    <div class="articol margin-top d-flex">
+                        <div class="date  col-1">
+                            <div class="day text-center">6</div>
+                            <div class="month text-center">JAN</div>
+                        </div>
+                        <div class="col-11  text">
+                            <h2>8 Amazing Things You Won't Believe Actually Exist In Nature</h2>
+                            <h3>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</h3>
+                            <div class="detail">
+                                <span class="name">
+                                     <i class="fa-regular fa-user"></i>
+                                     <a href="#">John Doe</a>
+                                </span>
+                                <span class="section">
+                                    <i class="fa-regular fa-folder"></i>
+                                    <a href="#"> Lifestyle, Travel</a>
+                                </span>
+                                <span class="comments">
+                                    <i class="fa-regular fa-comments"></i>
+                                    <a href="#">12 Comments</a>
+                                </span>
+                                <div class="float-end read-more">
+                                    <a href="#">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-11  text">
-                        <h2>8 Amazing Things You Won't Believe Actually Exist In Nature</h2>
-                        <h3>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</h3>
-                        <div class="detail">
-                            <span class="name">
-                                <i class="fa-regular fa-user"></i>
-                                <a href="#">John Doe</a>
-                            </span>
-                            <span class="section">
-                                <i class="fa-regular fa-folder"></i>
-                                <a href="#"> Lifestyle, Travel</a>
-                            </span>
-                            <span class="comments">
-                                <i class="fa-regular fa-comments"></i>
-                                <a href="#">12 Comments</a>
-                            </span>
-                            <div class="float-end read-more">
-                            
-                                <a href="#">READ MORE</a>
-                                
-                        
+                </div>
+                <!-- 2 video 2 page  -->
+                <div >
+                    <video class="margin-top" width="100%" height="500px" controls >
+                        <source :src="require('../../assets/img/introducing.mp4')" type="video/mp4">
+                    </video>
+                    <div class="articol margin-top d-flex">
+                        <div class="date  col-1">
+                            <div class="day text-center">6</div>
+                            <div class="month text-center">JAN</div>
+                        </div>
+                        <div class="col-11  text">
+                            <h2>7 Steps to Learn How to Play Piano</h2>
+                            <h3>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</h3>
+                            <div class="detail">
+                                <span class="name">
+                                     <i class="fa-regular fa-user"></i>
+                                     <a href="#">John Doe</a>
+                                </span>
+                                <span class="section">
+                                    <i class="fa-regular fa-folder"></i>
+                                    <a href="#"> Lifestyle, Travel</a>
+                                </span>
+                                <span class="comments">
+                                    <i class="fa-regular fa-comments"></i>
+                                    <a href="#">12 Comments</a>
+                                </span>
+                                <div class="float-end read-more">
+                                    <a href="#">READ MORE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            </div>
         </div>
-            <div class="button-page">
-               <button @click="prePage()" >--1--</button>
-               <button @click="nextSlide()" >--2--</button>
+            <div class="float-end margin-top button-page">
+                <a href="#google"><button :class="{'active-button' : !index}" @click="prePage()" >1</button></a>
+               <a href="#google" ><button  :class="{'active-button' : index}" @click="nextSlide()" >2</button></a>
+               
             </div>  
         </div>
 
@@ -251,6 +282,22 @@ export default {
     
     .container-card{
         min-height: 60vh;
+        button{
+            color: $txt-blue;
+            background-color: $bg-white;
+            border: 1px solid $br-grey;
+            width: 40px;
+            &:hover{
+                background-color: $bg-grey-white;
+            }
+        }
+        .active-button{
+            color: $txt-white;
+            background-color: $bg-blue;
+            &:hover{
+                background-color: $bg-blue;
+            }
+        }
         img{
             width: 100%;
             margin-top: 40px;
