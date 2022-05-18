@@ -1,9 +1,9 @@
 <template>
     <div class="container-fluid p-0 row">
-        <div class="container-card p-0 col-9 ">
-          <!-- 1 artical  -->
-            <div  v-for="(detail, index) in dati" :key="index">
-              <!-- <img :src="require(`${detail.img}`)" alt=""> -->
+        <div  class="container-card p-0 col-9 ">
+          <!-- artical  -->
+          <div v-if="indexPage1 == 0">
+            <div   v-for="(detail, index) in dati" :key="index">
               <img class="margin-top" :src="require('../../assets/img/' + detail.img)" alt="">
                 <div class="articol margin-top d-flex">
                     <div class="date  col-1">
@@ -71,6 +71,40 @@
                                 <i class="fa-regular fa-comments"></i>
                                 <a href="#">12 Comments</a>
                             </span>
+                            <div class="float-end read-more">                       
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div> 
+            </div> 
+            </div>
+        <div>
+            <!-- page 2 -->
+            <div v-if="index == 1" class="page2">
+                <div   v-for="(detail, index) in dati" :key="index">
+              <img class="margin-top" :src="require('../../assets/img/' + detail.img)" alt="">
+                <div class="articol margin-top d-flex">
+                    <div class="date  col-1">
+                        <div class="day text-center">{{detail.date}}</div>
+                        <div class="month text-center">JAN</div>
+                    </div>
+                    <div class="col-11  text">
+                        <h2>{{detail.title}}</h2>
+                        <h3>{{detail.text}}</h3>
+                        <div class="detail">
+                            <span class="name">
+                                <i class="fa-regular fa-user"></i>
+                                <a href="#">{{detail.author}}</a>
+                            </span>
+                            <span class="section">
+                                <i class="fa-regular fa-folder"></i>
+                                <a href="#">{{detail.section}}</a>
+                            </span>
+                            <span class="comments">
+                                <i class="fa-regular fa-comments"></i>
+                                <a href="#">{{detail.comments}}</a>
+                            </span>
                             <div class="float-end read-more">
                             
                                 <a href="#">READ MORE</a>
@@ -78,13 +112,20 @@
                         
                             </div>
                         </div>
-                    </div> 
-                </div> 
+                    </div>
+                </div>
             </div>
             
+            </div>
+        </div>
+            <div class="button-page">
+               <button @click="prePage()" >--1--</button>
+               <button @click="nextSlide()" >--2--</button>
+            </div>  
         </div>
 
-
+        <!-- change pages  -->
+        
       <!-- social -->
         <div class="social col-3">
             <div class="sticky">
@@ -162,8 +203,37 @@ export default {
     data(){
         return{
             dati: LastPost,
+            index: 0,
+            indexPage1:0,
+            
 
         }
+    },
+    methods:{
+        nextSlide(){
+            if(this.indexPage1 == 0){
+                this.indexPage1 += 1;
+                this.index += 1
+                console.log(this.index)
+                console.log(this.indexPage1)
+            }
+                
+            // this.index = (this.index === 1) ? 0 && this.indexPage1 += 1 : this.index += 1 ;
+            // console.log(this.index)
+            // console.log(this.indexPage1)
+        },
+        prePage(){
+            if(this.indexPage1 == 1){
+                this.indexPage1 -= 1;
+                this.index -= 1
+                console.log(this.index)
+                console.log(this.indexPage1)
+            }
+                
+            // this.index = (this.index === 1) ? 0 && this.indexPage1 += 1 : this.index += 1 ;
+            // console.log(this.index)
+            // console.log(this.indexPage1)
+        },
     }
 }
 </script>
