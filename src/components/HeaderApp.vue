@@ -18,7 +18,7 @@
       <nav class="navbar">
        
         <div  v-for="(bar,index) in dati" :key="index">
-          <a href="#">{{bar}}</a>
+          <a :class="{'active' : !index} " href="#">{{bar}}</a>
         </div>
       </nav>
   </div>
@@ -100,10 +100,10 @@ export default {
       &:hover {
         color: $txt-blue;
       }
-      &:active {
+    }
+    .active {
         color: $txt-blue;
       }
-    }
   }
 
 
