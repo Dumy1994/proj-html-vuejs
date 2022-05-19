@@ -1,10 +1,12 @@
 <template>
         <div class="section d-flex flex-column ">
+            <search-post @mySearch="setTextSearch($event) "/>
+            
             <h2>
                 RECENT POSTS
             </h2>
              <!-- section 1  -->
-            <div class="popular d-flex flex-column" v-for="(item,index) in dati" :key="index">
+            <div class="popular d-flex flex-column" v-for="(item,index) in textShow" :key="index">
                 <div class="section-popular d-flex">
                     <img :src="require('../../assets/img/' + item.img)" alt="blog-65">
                     <span>
@@ -22,13 +24,51 @@
 
 <script>
 import RecentPost from '../../RecentPost'
+import SearchPost from './SearchPost.vue'
 export default {
+  components: { SearchPost },
     name: 'PopularPost',
     data(){
         return{
             dati: RecentPost,
+            searchText:'',
+            
+            
         }
-    }
+    },
+    methods:{
+       setTextSearch(text){
+           this.searchText = text
+       },
+       empity(){
+            if(this.inputText == ''){
+          return this.notFound = true
+        }else{
+          return this.notFound = false
+        }
+       }
+       
+    },
+    computed:{
+        textShow(){
+            return this.dati.filter((el)=>el.title.toLowerCase().includes(this.searchText.toLowerCase()));
+           
+            
+            
+        }
+        // listSearch(){
+        //   return this.textShow = this.dati.filter((el)=>{
+        //      if(el.title.toLowerCase().includes(this.searchText.toLowerCase())){
+        //          return true
+        //      }else{
+        //          return false
+        //      }
+        //     })
+        //     return this.textShow,
+        //     console.log(this.textShow)
+
+        // },
+    },
 }
 </script>
 

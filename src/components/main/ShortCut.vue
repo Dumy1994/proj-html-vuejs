@@ -2,7 +2,7 @@
   <section class="container-fluid p-0 short">
       <ul class="d-flex justify-content-between p-0 align-items-center">
           <li @click="prevSlide"><i class="fa-solid text-center  fa-angle-left"></i></li>
-          <li  v-for="(item, activeIndex) in short.slice(n, activeIndex)" :key="activeIndex">
+          <li  v-for="(item, index) in short.slice(n, nMax)" :key="index">
               <a  href="#" >{{item}}</a>
           </li>
           <li @click="nextSlide"><i  class="fa-solid text-center fa-angle-right"></i></li>
@@ -17,7 +17,7 @@ export default {
     data(){
         return{
             short:['GADGETS','PHOTOGRAPHY', 'LIFESTYLE', 'FASHION', 'RECIPES', 'TRAVEL','ARCHITECTURE','REVIEWS','SPORTS','VIDEOS','TECHNOLOGY','DESIGN'],
-            activeIndex: 5,
+            nMax: 5,
             n: 0,
             
 
@@ -26,16 +26,27 @@ export default {
     methods:{
         
         nextSlide(){
-            this.activeIndex = (this.activeIndex === 13) ? 5 : this.activeIndex += 1;
-            this.n = (this.n <= 5) ? this.n +1 : this.n -= 1; 
-            console.log(this.activeIndex)
+            this.nMax = this.nMax +1
+            if(this.nMax >= 12){
+                this.nMax = 12
+            }
+    
+            this.n = this.n +1
+             
+            if(this.n >= 7){
+                this.n = 7
+            }
+            console.log(this.nMax)
             console.log(this.n)
         },
         prevSlide(){
-            this.activeIndex = (this.activeIndex <= 5) ? 5 :this.activeIndex -= 1;
-            this.n = (this.n >= 0) ? this.n -=1 : this.n += 1
-            console.log(this.activeIndex)
-            console.log(this.n)
+            this.nMax = (this.nMax <= 5) ? 5 :this.nMax -= 1;
+            this.n = this.n -=1
+            if(this.n <=0){
+                this.n = 0
+            }
+            
+          
         },
     },
     
