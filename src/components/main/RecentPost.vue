@@ -1,10 +1,10 @@
 <template>
         <div class="section d-flex flex-column ">
-            <search-post @mySearch="setTextSearch($event) "/>
             
             <h2>
                 RECENT POSTS
             </h2>
+            
              <!-- section 1  -->
             <div class="popular d-flex flex-column" v-for="(item,index) in textShow" :key="index">
                 <div class="section-popular d-flex">
@@ -16,6 +16,7 @@
                 </div>
                 <hr>  
             </div>
+            <search-post @mySearch="setTextSearch($event) "/>
            
             
             
